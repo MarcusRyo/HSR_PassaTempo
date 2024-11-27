@@ -1,3 +1,65 @@
+const elements = [
+    {
+        name: "Fire",
+        icon: "./src/assets/iconElementFire.png",
+    },
+    {
+        name: "Ice",
+        icon: "./src/assets/iconElementIce.png",
+    },
+    {
+        name: "Imaginary",
+        icon: "./src/assets/iconElementImaginary.png",
+    },
+    {
+        name: "Lightning",
+        icon: "./src/assets/iconElementLightning.png",
+    },
+    {
+        name: "Physical",
+        icon: "./src/assets/iconElementPhysical.png",
+    },
+    {
+        name: "Quantum",
+        icon: "./src/assets/iconElementQuantum.png",
+    },
+    {
+        name: "Wind",
+        icon: "./src/assets/iconElementWind.png",
+    }
+];
+
+const paths = [
+    {
+        name: "Abundance",
+        icon: "./src/assets/iconPathAbundance.png",
+    },
+    {
+        name: "Destruction",
+        icon: "./src/assets/iconPathDestruction.png",
+    },
+    {
+        name: "Erudition",
+        icon: "./src/assets/iconPathErudition.png",
+    },
+    {
+        name: "Harmony",
+        icon: "./src/assets/iconPathHarmony.png",
+    },
+    {
+        name: "Hunt",
+        icon: "./src/assets/iconPathHunt.png",
+    },
+    {
+        name: "Nihility",
+        icon: "./src/assets/iconPathNihility.png",
+    },
+    {
+        name: "Preservation",
+        icon: "./src/assets/iconPathPreservation.png",
+    },
+];
+
 const banners = [
     {
         title: "Buterfly on Swordtip",
@@ -5,11 +67,11 @@ const banners = [
         path: "Hunt",
         element: "Quantum",
         img: "./src/img/Seele.png",
-        releaseVersion: 1.0,
+        releaseVersion: "1.0",
         phase: 1,
         reruns:[
             {
-                version: 1.4,
+                version: "1.4",
                 phase: 2,
                 date:"2023-10-27 ~ 2023-11-15",
             },
@@ -24,11 +86,11 @@ const banners = [
         path: "Erudition",
         element: "Lightning",
         img: "./src/img/JingYuan.png",
-        releaseVersion: 1.0,
+        releaseVersion: "1.0",
         phase: 2,
         reruns:[
             {
-                version: 2.0,
+                version: "2.0",
                 phase: 2,
                 date:"2024-02-29 ~ 2024-03-26",
             },
@@ -43,11 +105,11 @@ const banners = [
         path: "Nihility",
         element: "Quantum",
         img: "./src/img/LobaPrateada.png",
-        releaseVersion: 1.1,
+        releaseVersion: "1.1",
         phase: 1,
         reruns:[
             {
-                version: 1.5,
+                version: "1.5",
                 phase: 2,
                 date:"2023-12-06 ~ 2023-12-26",
             },
@@ -62,11 +124,11 @@ const banners = [
         path: "Abundance",
         element: "Imaginary",
         img: "./src/img/Luocha.png",
-        releaseVersion: 1.1,
+        releaseVersion: "1.1",
         phase: 2,
         reruns:[
             {
-                version: 2.1,
+                version: "2.1",
                 phase: 1,
                 date:"2024-03-26 ~ 2024-04-17",
             },
@@ -81,11 +143,11 @@ const banners = [
         path: "Destruction",
         element: "Wind",
         img: "./src/img/Blade.png",
-        releaseVersion: 1.2,
+        releaseVersion: "1.2",
         phase: 1,
         reruns:[
             {
-                version: 1.6,
+                version: "1.6",
                 phase: 1,
                 date:"2023-12-26 ~ 2024-01-17",
             },
@@ -100,16 +162,16 @@ const banners = [
         path: "Nihility",
         element: "Lightning",
         img: "./src/img/Kafka.png",
-        releaseVersion: 1.2,
+        releaseVersion: "1.2",
         phase: 2,
         reruns:[
             {
-                version: 1.6,
+                version: "1.6",
                 phase: 2,
                 date:"2024-01-17 ~ 2024-02-05",
             },
             {
-                version: 2.5,
+                version: "2.5",
                 phase: 1,
                 date:"2024-09-09 ~ 2024-10-02",
             },
@@ -124,16 +186,16 @@ const banners = [
         path: "Destruction",
         element: "Imaginary",
         img: "./src/img/ImbibitorLunae.png",
-        releaseVersion: 1.3,
+        releaseVersion: "1.3",
         phase: 1,
         reruns:[
             {
-                version: 2.0,
+                version: "2.0",
                 phase: 1,
                 date:"2024-02-05 ~ 2024-02-29",
             },
             {
-                version: 2.6,
+                version: "2.6",
                 phase: 1,
                 date:"2024-10-22 ~ 2024-11-13",
             },
@@ -148,11 +210,11 @@ const banners = [
         path: "Preservation",
         element: "Quantum",
         img: "./src/img/FuXuan.png",
-        releaseVersion: 1.3,
+        releaseVersion: "1.3",
         phase: 2,
         reruns:[
             {
-                version: 2.2,
+                version: "2.2",
                 phase: 2,
                 date:"2024-05-29 ~ 2024-06-18",
             },
@@ -167,11 +229,11 @@ const banners = [
         path: "Destruction",
         element: "Ice",
         img: "./src/img/Jingliu.png",
-        releaseVersion: 1.4,
+        releaseVersion: "1.4",
         phase: 1,
         reruns:[
             {
-                version: 2.1,
+                version: "2.1",
                 phase: 2,
                 date:"2024-04-17 ~ 2024-05-07",
             },
@@ -186,16 +248,16 @@ const banners = [
         path: "Hunt",
         element: "Fire",
         img: "./src/img/Topaz.png",
-        releaseVersion: 1.4,
+        releaseVersion: "1.4",
         phase: 2,
         reruns:[
             {
-                version: 2.2,
+                version: "2.2",
                 phase: 1,
                 date:"2024-05-07 ~ 2024-05-29",
             },
             {
-                version: 2.5,
+                version: "2.5",
                 phase: 2,
                 date:"2024-10-02 ~ 2024-10-22",
             },
@@ -210,11 +272,11 @@ const banners = [
         path: "Abundance",
         element: "Wind",
         img: "./src/img/Huohuo.png",
-        releaseVersion: 1.5,
+        releaseVersion: "1.5",
         phase: 1,
         reruns:[
             {
-                version: 2.4,
+                version: "2.4",
                 phase: 1,
                 date:"2024-07-30 ~ 2024-08-21",
             },
@@ -229,11 +291,11 @@ const banners = [
         path: "Erudition",
         element: "Physical",
         img: "./src/img/Argenti.png",
-        releaseVersion: 1.5,
+        releaseVersion: "1.5",
         phase: 2,
         reruns:[
             {
-                version: 2.3,
+                version: "2.3",
                 phase: 2,
                 date:"2024-07-10 ~ 2024-07-30",
             },
@@ -248,11 +310,11 @@ const banners = [
         path: "Harmony",
         element: "Ice",
         img: "./src/img/RuanMei.png",
-        releaseVersion: 1.6,
+        releaseVersion: "1.6",
         phase: 1,
         reruns:[
             {
-                version: 2.3,
+                version: "2.3",
                 phase: 1,
                 date:"2024-06-18 ~ 2024-07-10",
             },
@@ -267,15 +329,9 @@ const banners = [
         path: "Hunt",
         element: "Imaginary",
         img: "./src/img/DrRatio.png",
-        releaseVersion: 1.6,
+        releaseVersion: "1.6",
         phase: 2,
-        reruns:[
-            {
-                version: 0,
-                phase: 0,
-                date:"",
-            },
-        ],
+        reruns:[],
         releaseDate: ["2024-01-17 ~ 2024-02-05"],
         character4star: ["Sushang", "Natasha", "Hook"],
         lightCone: "Baptism of Pure Thought",
@@ -286,11 +342,11 @@ const banners = [
         path: "Nihility",
         element: "Wind",
         img: "./src/img/BlackSwan.png",
-        releaseVersion: 2.0,
+        releaseVersion: "2.0",
         phase: 1,
         reruns:[
             {
-                version: 2.5,
+                version: "2.5",
                 phase: 1,
                 date:"2024-09-09 ~ 2024-10-02",
             },
@@ -305,11 +361,11 @@ const banners = [
         path: "Harmony",
         element: "Quantum",
         img: "./src/img/Sparkle.png",
-        releaseVersion: 2.0,
+        releaseVersion: "2.0",
         phase: 2,
         reruns:[
             {
-                version: 2.4,
+                version: "2.4",
                 phase: 2,
                 date:"2024-08-21 ~ 2024-09-09",
             },
@@ -324,11 +380,11 @@ const banners = [
         path: "Nihility",
         element: "Lightning",
         img: "./src/img/Acheron.png",
-        releaseVersion: 2.1,
+        releaseVersion: "2.1",
         phase: 1,
         reruns:[
             {
-                version: 2.6,
+                version: "2.6",
                 phase: 2,
                 date:"2024-11-13 ~ 2024-12-03",
             },
@@ -343,11 +399,11 @@ const banners = [
         path: "Preservation",
         element: "Imaginary",
         img: "./src/img/Aventurine.png",
-        releaseVersion: 2.1,
+        releaseVersion: "2.1",
         phase: 2,
         reruns:[
             {
-                version: 2.6,
+                version: "2.6",
                 phase: 2,
                 date:"2024-11-13 ~ 2024-12-03",
             },
@@ -362,11 +418,11 @@ const banners = [
         path: "Harmony",
         element: "Physical",
         img: "./src/img/Robin.png",
-        releaseVersion: 2.2,
+        releaseVersion: "2.2",
         phase: 1,
         reruns:[
             {
-                version: 2.5,
+                version: "2.5",
                 phase: 1,
                 date:"2024-09-09 ~ 2024-10-02",
             },
@@ -381,7 +437,7 @@ const banners = [
         path: "Hunt",
         element: "Physical",
         img: "./src/img/Boothill.png",
-        releaseVersion: 2.2,
+        releaseVersion: "2.2",
         phase: 2,
         reruns:[],
         releaseDate: ["2024-05-29 ~ 2024-06-18"],
@@ -394,7 +450,7 @@ const banners = [
         path: "Destruition",
         element: "Fire",
         img: "./src/img/Firefly.png",
-        releaseVersion: 2.3,
+        releaseVersion: "2.3",
         phase: 1,
         reruns:[],
         releaseDate: ["2024-06-18 ~ 2024-07-10"],
@@ -407,7 +463,7 @@ const banners = [
         path: "Erudition",
         element: "Quantum",
         img: "./src/img/Jade.png",
-        releaseVersion: 2.3,
+        releaseVersion: "2.3",
         phase: 2,
         reruns:[],
         releaseDate: ["2024-07-10 ~ 2024-07-30"],
@@ -420,7 +476,7 @@ const banners = [
         path: "Destruition",
         element: "Physical",
         img: "./src/img/Yunli.png",
-        releaseVersion: 2.4,
+        releaseVersion: "2.4",
         phase: 1,
         reruns:[],
         releaseDate: ["2024-07-30 ~ 2024-08-21"],
@@ -433,7 +489,7 @@ const banners = [
         path: "Nihility",
         element: "Fire",
         img: "./src/img/Jiaoqiu.png",
-        releaseVersion: 2.4,
+        releaseVersion: "2.4",
         phase: 2,
         reruns:[],
         releaseDate: ["2024-08-21 ~ 2024-09-09"],
@@ -446,7 +502,7 @@ const banners = [
         path: "Hunt",
         element: "Wind",
         img: "./src/img/Feixiao.png",
-        releaseVersion: 2.5,
+        releaseVersion: "2.5",
         phase: 1,
         reruns:[],
         releaseDate: ["2024-09-09 ~ 2024-10-02"],
@@ -459,7 +515,7 @@ const banners = [
         path: "Abundance",
         element: "Fire",
         img: "./src/img/Lingsha.png",
-        releaseVersion: 2.5,
+        releaseVersion: "2.5",
         phase: 2,
         reruns:[],
         releaseDate: ["2024-- ~ 2024--"],
@@ -472,7 +528,7 @@ const banners = [
         path: "Erudition",
         element: "Imaginary",
         img: "./src/img/Rappa.png",
-        releaseVersion: 2.6,
+        releaseVersion: "2.6",
         phase: 1,
         reruns:[],
         releaseDate: ["2024-10-22 ~ 2024-11-13"],
@@ -485,7 +541,7 @@ const banners = [
         path: "",
         element: "",
         img: "./src/img/beginner.png",
-        releaseVersion: 2.6,
+        releaseVersion: "2.6",
         phase: 2,
         reruns:[],
         releaseDate: ["2024-11-13 ~ 2024-12-03"],

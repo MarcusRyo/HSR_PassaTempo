@@ -1,0 +1,75 @@
+@import url(./reset.css);
+
+:root {
+  --border-radius: 8px;
+  --box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+  --color-gray-1: #242424;
+  --color-gray-2: #303030;
+  --color-gray-3: #515151;
+  --color-gray-4: #5d5d5d;
+  --color-gray-5: #b5b5b5;
+  --color-gray-6: #d3d3d3;
+  --color-gray-7: #f0f0f0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--color-gray-1);
+  margin: 0 10%;
+  color: var(--color-gray-7);
+}
+
+#content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.bannerBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  border-radius: var(--border-radius);
+  background-color: var(--color-gray-2);
+  box-shadow: var(--box-shadow);
+}
+
+
+.bannerImage {
+  display: flex;
+  height: 25rem;
+  position: relative;
+}
+.characterImg {
+  height: 100%;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+.characterPath {
+  height: 3rem;
+  position: absolute;
+  z-index: 1;
+  left: 0.5rem;
+  bottom: 0.5rem;
+}
+.characterElement {
+  height: 3rem;
+  position: absolute;
+  z-index: 1;
+  right: 0.5rem;
+  bottom: 0.5rem;
+}
+
+
+.bannerInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem;
+  gap: 0.3rem;
+}
+.bannerInfo p {
+  font-size: 1rem;
+  font-weight: 500;
+}

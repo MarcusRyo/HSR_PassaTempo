@@ -1,23 +1,24 @@
-
 banners.forEach(banner => {
-    const teste = document.getElementById('teste');
+    const content = document.getElementById('content');
     const bannerElement = document.createElement('div');
-
-    const element = getElementType(banner);
-    console.log(element);
+    bannerElement.classList.add('bannerBox');
     
     bannerElement.innerHTML = `
-        <img src="${banner.img}" alt="${banner.name}" />
-        <h2>${banner.characterName}</h2>
-        <p>${banner.path}</p>
-        <p>${element}</p>
-        <img src="${getElementIcon(element)}" alt="${element}" />
-        <p>Versão de lançamento: ${banner.releaseVersion}</p>
-        <p>Metade: ${banner.phase}</p>
-        <p>Cone de Luz ${banner.lightCone}</p>
-
+        <div class="bannerImage">
+            <img class="characterImg" src="${banner.img}" alt="${banner.characterName}" />
+            <img class="characterElement" src="${getElementIcon(banner.element)}" alt="${getElementType(banner)}" />
+            <img class="characterPath" src="${getPathIcon(banner.path)}" alt="${getPath(banner)}" />
+        </div>
+        <div class="bannerInfo">
+            <h2 class="characterName">${banner.characterName}</h2>
+            <p>Caminho: ${getPath(banner)}</p>
+            <p>Elemento: ${getElementType(banner)}</p>
+            <p>Versão de lançamento: ${banner.releaseVersion}</p>
+            <p>${getPhase(banner)}</p>
+            <p>Cone de Luz: ${banner.lightCone}</p>
+        </div>
     `;
-    teste.appendChild(bannerElement);
+    content.appendChild(bannerElement);
 
 });
 
@@ -42,23 +43,52 @@ function getElementType(character) {
     return element;
 }
 
-function getElementIcon(element) {
+function getElementIcon(characterElement) {
     let elementIcon = "";
-    if (element === 'Vento') {
-        elementIcon = './src/img/Wind.png';
-    } else if (element === 'Quantico') {
-        elementIcon = './src/img/Quantum.png';
-    } else if (element === 'Imaginário') {
-        elementIcon = './src/img/Imaginary.png';
-    } else if (element === 'Fogo') {
-        elementIcon = './src/img/Fire.png';
-    } else if (element === 'Raio') {
-        elementIcon = './src/img/Lightning.png';
-    } else if (element === 'Gelo') {
-        elementIcon = './src/img/Ice.png';
-    } else if (element === 'Físico') {
-        elementIcon = './src/img/Physical.png';
+    elements.forEach(element => {
+        if (element.name == characterElement) {
+            elementIcon = element.icon;
+        }
+    });
+    return elementIcon;
+}
+
+function getPath(character) {
+    let path = "";
+    if (character.path === 'Hunt') {
+        path = 'Caça';
+    } else if (character.path === 'Erudition') {
+        path = 'Erudição';
+    } else if (character.path === 'Nihility') {
+        path = 'Inexistencia';
+    } else if (character.path === 'Abundance') {
+        path = 'Abundancia';
+    } else if (character.path === 'Destruction') {
+        path = 'Destruição';
+    } else if (character.path === 'Preservation') {
+        path = 'Preservação';
+    } else if (character.path === 'Harmony') {
+        path = 'Harmonia';
     }
 
-    return elementIcon;
+    return path;
+}
+
+function getPhase(character) {
+    if (character.phase === 1) {
+        return 'Primeira Parte';
+    } else if (character.phase === 2) {
+        return 'Segunda Parte';
+    }
+}
+
+function getPathIcon(characterPath){
+    let pathIcon = "";
+    paths.forEach(path => {
+        if (path.name == characterPath) {
+            pathIcon = path.icon;
+        }
+    });
+    console.log(pathIcon);
+    return pathIcon;
 }
